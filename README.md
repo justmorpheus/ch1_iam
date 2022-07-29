@@ -6,9 +6,73 @@ Looking for an instructor led workshop on cloud? Say [training@securitydojo.co.i
 
 ## Introduction
 
-We are using `<Variable>` to indicate that you should replace parts of the instructions with a variable.
+These labs can be setup using terraform and setup AWS resources.
 
-## Preparing the lab environment
+## Training Prerequsites 
+
+* Familiarity with AWS console.
+* Comfortable using command-line tools to log in to servers, install packages, execute scripts and applications
+* Basics of Networking concepts enough to understand Cloud Architecture.
+* Configured AWS CLI with ```AdministratorAccess```.
+
+## Preparing the lab environment via terraform 
+
+Note: If you have not setup your aws cli follow AWS-CLI-Configuration under the Setup section
+
+Basic Terraform
+Step 1: Change directory
+cd /root/aws-security-training/terraform_intro/basic
+CopyErrorCopied
+Step 2: Initialize the terraform plugins
+terraform init
+CopyErrorCopied
+Step 3: Describe the plan of action
+terraform plan
+CopyErrorCopied
+Step 4: Now create the infrastructure
+terraform apply
+CopyErrorCopied
+NOTE: To skip typing yes try terraform apply -auto-approve.
+
+Step 5: Once you entered. It will create a S3 bucket. In the output you will see a S3 bucket name and S3 bucket URL.
+
+Step 6: To see the created S3 bucket click on the BucketURL link.
+
+Teardown
+Step 1: Change directory
+cd /root/aws-security-training/terraform_intro/basic
+CopyErrorCopied
+Step 2: Now you can destroy the box
+terraform destroy
+CopyErrorCopied
+NOTE: To skip typing yes try terraform destroy -force.
+
+It will take few minutes.
+
+Advanced Terraform
+Step 1: Change directory
+cd /root/aws-security-training/terraform_intro/advanced
+CopyErrorCopied
+Step 2: Initialize the terraform plugins
+terraform init
+CopyErrorCopied
+Step 3: Describe the plan of action
+terraform plan
+CopyErrorCopied
+Step 4: Now create the infrastructure
+terraform apply -auto-approve
+CopyErrorCopied
+Step 5: In ProvisionedServerInfo just copy the URL and paste into the browser. You will see a Welcome Page.
+Teardown
+Step 1: Now you can destroy the box
+terraform destroy -auto-approve
+CopyErrorCopied
+It will take few minutes.
+
+References
+https://www.terraform.io/intro/index.html
+https://learn.hashicorp.com/terraform/
+
 
 The CloudFormation template `lab-environment.yml` creates a lab environment consisting of:
 
