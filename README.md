@@ -1,8 +1,8 @@
 # Chapter-1 | IAM - Security & Auditing Cloud 
 
-Labs helping you to learn how write IAM policies following the least privilege principle.
+Cloud Security Labs to learn IAM policies following the least privilege principle. 
 
-Are you looking for an instructor-led workshop based on these labs? Say [hello@widdix.net](mailto:hello@widdix.net).
+Looking for an instructor led workshop on cloud? Say [training@securitydojo.co.in](mailto:training@securitydojo.co.in).
 
 ## Introduction
 
