@@ -91,17 +91,17 @@ The CloudFormation template `lab-environment.yml` creates a lab environment cons
 
 ## Labs
 
-* [Lab 01: S3 read access](https://github.com/widdix/learn-iam-policy/tree/master/01-s3-read)
-* [Lab 02: S3 read and write with prefix](https://github.com/widdix/learn-iam-policy/tree/master/02-s3-prefix)
-* [Lab 03: Parameter Store read access](https://github.com/widdix/learn-iam-policy/tree/master/03-parameterstore-path)
-* [Lab 04: Grant access to KMS customer managed CMK](https://github.com/widdix/learn-iam-policy/tree/master/04-kms-cmk)
-* [Lab 05: Terminate EC2 instance with tag](https://github.com/widdix/learn-iam-policy/tree/master/05-ec2-terminate-tag)
-* [Lab 06: Launch EC2 instance with tag](https://github.com/widdix/learn-iam-policy/tree/master/06-ec2-launch-tag)
+* [Lab 01: S3 read access](https://github.com/justmorpheus/ch1_iam/tree/main/01-s3-read)
+* [Lab 02: S3 read and write with prefix](https://github.com/justmorpheus/ch1_iam/tree/main/02-s3-prefix)
+* [Lab 03: Parameter Store read access](https://github.com/justmorpheus/ch1_iam/tree/main/03-parameterstore-path)
+* [Lab 04: Grant access to KMS customer managed CMK](https://github.com/justmorpheus/ch1_iam/tree/main/04-kms-cmk)
+* [Lab 05: Terminate EC2 instance with tag](https://github.com/justmorpheus/ch1_iam/tree/main/05-ec2-terminate-tag)
+* [Lab 06: Launch EC2 instance with tag](https://github.com/justmorpheus/ch1_iam/tree/main/06-ec2-launch-tag)
 
 ## Clean up
 
-1. Empty your S3 bucket `<S3Bucket>`.
-1. Delete your CloudFormation stack.
+1. Empty your S3 bucket created via terraform.
+1. Destroy your infrastructure via `terraform destroy --auto-approve`.
 
 ## More Labs
 
