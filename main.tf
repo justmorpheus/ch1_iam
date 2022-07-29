@@ -3,6 +3,7 @@ provider "aws" {
   region = "us-west-2"
 }
 
+# Create ham role
 
 resource "aws_iam_role" "mystack" {
   name               = "ch_1_iam_cloud_securitydojo"
@@ -10,7 +11,7 @@ resource "aws_iam_role" "mystack" {
 }
 
 resource "aws_iam_policy" "policy" {
-  name        = "DO-NOT-CHANGE-LAB-SSM-CONNECTION"
+  name        = "ch1_lab_ss_connection_securitydojo"
   description = "Policy for ch_1_iam_cloud_securitydojo"
   policy      = "${file("policys3bucket.json")}"
 }
@@ -26,6 +27,7 @@ name  = "test_profile"
 role = aws_iam_role.mystack.name
 }
 
+# Create Ec2 in the region us-east-2
 
 resource "aws_instance" "iam-security-ch1" {
   ami             = "ami-0d08ef957f0e4722b"
@@ -37,10 +39,11 @@ resource "aws_instance" "iam-security-ch1" {
   }
 }
 
+# Create S3 bucket
 
 resource "aws_s3_bucket" "s3bucket" {
   bucket_prefix = "securitydojo-"
-
+  force_destroy = true
   tags = {
     Name        = "securitydojo"
     Environment = "ch1_iam"
@@ -50,11 +53,35 @@ resource "aws_s3_bucket" "s3bucket" {
 resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.s3bucket.id
   acl    = "private"
+
+  
 }
 
-
+# SSM parameter store demo
 resource "aws_ssm_parameter" "foo" {
   name  = "/var/secret"
   type  = "String"
   value = "superuser_secret"
+}
+
+# Output
+
+output "s3bucket" {
+  value = aws_s3_bucket.s3bucket.id
+  description = "S3 Bucket"
+
+}
+
+
+output "iamrole" {
+  value = aws_iam_role.mystack.name
+  description = "Iam Role"
+
+}
+
+
+output "ec2" {
+  value = aws_iam_role.mystack.name
+  description = "Iam Role"
+
 }
