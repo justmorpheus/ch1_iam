@@ -1,4 +1,4 @@
-# Chapter-1 | IAM - Security & Auditing Cloud 
+# Chapter-1 | IAM - Securing & Auditing Cloud (AWS/GCP/AZURE)
 
 Cloud Security Labs to learn IAM policies following the least privilege principle. 
 
@@ -44,6 +44,7 @@ These labs can be setup using terraform and setup AWS resources.
     -  Step 4: Now create the infrastructure via ```terraform apply```
    
    NOTE: To skip typing yes try terraform apply -auto-approve.
+   
 5. Once the terraform apply is complete, it will give output of above created resources.
 
 
