@@ -8,12 +8,14 @@ Looking for an instructor led workshop on cloud? Connect on [training@securitydo
 
 These labs can be setup using terraform and setup AWS resources.
 
+
 ## Training Prerequsites 
 
 * Familiarity with AWS console.
 * Comfortable using command-line tools to log in to servers, install packages, execute scripts and applications
 * Basics of Networking concepts enough to understand Cloud Architecture.
 * Configured AWS CLI with ```AdministratorAccess```.
+
 
 ## Preparing the lab environment via terraform 
 
@@ -32,27 +34,18 @@ These labs can be setup using terraform and setup AWS resources.
    * Now select the one which has a Policy name as AdministratorAccess and click Next and again click Next
    * Now click Create User
    * Now you can download the csv file that will have your access-key and secret-key
-   * Open terminal and run ```aws configure```.
+   * Open terminal and run `aws configure`.
  ```
-
-
-4. Basic Terraform
+ 4. Basic Terraform
 
     - Step 1: Change directory: ```cd /root/aws-security-training/terraform_intro/basic```
     - Step 2: Initialize the terraform plugins via ```terraform init```
     -  Step 3: Describe the plan of action via ```terraform plan```
     -  Step 4: Now create the infrastructure via ```terraform apply```
-    NOTE: To skip typing yes try terraform apply -auto-approve.
+   
+   NOTE: To skip typing yes try terraform apply -auto-approve.
+5. Once the terraform apply is complete, it will give output of above created resources.
 
-
-
-Step 5: Once you entered. It will create a S3 bucket. In the output you will see a S3 bucket name and S3 bucket URL.
-
-Step 6: To see the created S3 bucket click on the BucketURL link.
-
-
-
-Teardown
 
 ## Labs
 
@@ -67,6 +60,7 @@ Teardown
 
 1. Empty your S3 bucket created via terraform.
 1. Destroy your infrastructure via `terraform destroy --auto-approve`.
+
 
 ## Thanks to Widdix
 
