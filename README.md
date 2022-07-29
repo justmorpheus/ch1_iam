@@ -17,7 +17,7 @@ These labs can be setup using terraform and setup AWS resources.
 
 ## Preparing the lab environment via terraform 
 
-1. Clone the github repository 
+1. Clone the github repository via
      ```git clone https://github.com/justmorpheus/ch1_iam```
 2. Setup the aws cli via 
 ```* Go to browser
@@ -32,8 +32,7 @@ These labs can be setup using terraform and setup AWS resources.
    * Now select the one which has a Policy name as AdministratorAccess and click Next and again click Next
    * Now click Create User
    * Now you can download the csv file that will have your access-key and secret-key
-   * Open terminal
-   Initiate configuration
+   * Open terminal and run ```aws configure```.
  ```
 
 
