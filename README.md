@@ -2,7 +2,7 @@
 
 Cloud Security Labs to learn IAM policies following the least privilege principle. 
 
-Looking for an instructor led workshop on cloud? Say [training@securitydojo.co.in](mailto:training@securitydojo.co.in).
+Looking for an instructor led workshop on cloud? Connect on [training@securitydojo.co.in](mailto:training@securitydojo.co.in).
 
 ## Introduction
 
@@ -17,7 +17,6 @@ These labs can be setup using terraform and setup AWS resources.
 
 ## Preparing the lab environment via terraform 
 
-Note: If you have not setup your aws cli follow AWS-CLI-Configuration under the Setup section
 
 Basic Terraform
 Step 1: Change directory
