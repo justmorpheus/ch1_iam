@@ -59,7 +59,6 @@ These labs can be setup using terraform and setup AWS resources.
 
 ## Clean up
 
-1. Empty your S3 bucket created via terraform.
 1. Destroy your infrastructure via `terraform destroy --auto-approve`.
 
 
