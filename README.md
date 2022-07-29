@@ -1,4 +1,4 @@
-# learn-iam-policy
+# Chapter-1 | IAM - Security & Auditing Cloud 
 
 Labs helping you to learn how write IAM policies following the least privilege principle.
 
