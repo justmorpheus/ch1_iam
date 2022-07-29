@@ -1,93 +1,270 @@
+1
+
 # Chapter-1 | IAM - Security & Auditing Cloud 
+
+2
+
+​
+
+3
 
 Cloud Security Labs to learn IAM policies following the least privilege principle. 
 
+4
+
+​
+
+5
+
 Looking for an instructor led workshop on cloud? Connect on [training@securitydojo.co.in](mailto:training@securitydojo.co.in).
+
+6
+
+​
+
+7
 
 ## Introduction
 
+8
+
+​
+
+9
+
 These labs can be setup using terraform and setup AWS resources.
+
+10
+
+​
+
+11
 
 ## Training Prerequsites 
 
+12
+
+​
+
+13
+
 * Familiarity with AWS console.
+
+14
+
 * Comfortable using command-line tools to log in to servers, install packages, execute scripts and applications
+
+15
+
 * Basics of Networking concepts enough to understand Cloud Architecture.
+
+16
+
 * Configured AWS CLI with ```AdministratorAccess```.
+
+17
+
+​
+
+18
 
 ## Preparing the lab environment via terraform 
 
+19
 
-Basic Terraform
-Step 1: Change directory
-cd /root/aws-security-training/terraform_intro/basic
+​
+
+20
+
+1. Clone the github repository 
+
+21
+
+    ```git clone https://github.com/justmorpheus/ch1_iam
+
+22
+
+    ```
+
+23
+
+2. Setup the aws cli via 
+
+24
+
+    ```* Go to browser
+
+25
+
+    Signup/Signin to aws console
+
+26
+
+​
+
+27
+
+Step 3: In the search bar type IAM
+
+28
+
+​
+
+29
+
+Step 4: Click on Users on the sidebar
+
+30
+
+​
+
+31
+
+Step 5: Click on add user, you will be redirected to a new page
+
+32
+
+​
+
+33
+
+Step 6: Fill the user name you wish
+
+34
+
+​
+
+35
+
+Step 7: In the Access type checkbox selection select Programmatic access and click Next
+
+36
+
+​
+
+37
+
+Step 8: Now select Attach existing policies directly
+
+38
+
+​
+
+39
+
+Step 9: In the search bar enter AdministratorAccess
+
+40
+
+​
+
+41
+
+Step 10: Now select the one which has a Policy name as AdministratorAccess and click Next and again click Next
+
+42
+
+​
+
+43
+
+Step 11: Now click Create User
+
+44
+
+​
+
+45
+
+Step 12: Now you can download the csv file that will have your access-key and secret-key
+
+46
+
+​
+
+47
+
+Step 13: Open terminal
+
+48
+
+​
+
+49
+
+Step 14: Initiate configuration
+
+50
+
+       
+
+51
+
+    ```
+
+52
+
+4. Basic Terraform
+
+53
+
+    - Step 1: Change directory: ```cd /root/aws-security-training/terraform_intro/basic```
+
+54
+
+    - Step 2: Initialize the terraform plugins via ```terraform init```
+
+55
+
+    - Step 3: Describe the plan of action via ```terraform plan```
+
+56
+
+    - Step 4: Now create the infrastructure via ```terraform apply```
+
+57
+
+​
+
+58
+
+​
+
+59
+
+​
+
+60
+
 CopyErrorCopied
-Step 2: Initialize the terraform plugins
-terraform init
-CopyErrorCopied
-Step 3: Describe the plan of action
-terraform plan
-CopyErrorCopied
-Step 4: Now create the infrastructure
-terraform apply
-CopyErrorCopied
+
+61
+
 NOTE: To skip typing yes try terraform apply -auto-approve.
+
+62
+
+​
+
+63
 
 Step 5: Once you entered. It will create a S3 bucket. In the output you will see a S3 bucket name and S3 bucket URL.
 
+64
+
+​
+
+65
+
 Step 6: To see the created S3 bucket click on the BucketURL link.
 
+66
+
+​
+
+67
+
 Teardown
-Step 1: Change directory
-cd /root/aws-security-training/terraform_intro/basic
-CopyErrorCopied
-Step 2: Now you can destroy the box
-terraform destroy
-CopyErrorCopied
-NOTE: To skip typing yes try terraform destroy -force.
-
-It will take few minutes.
-
-Advanced Terraform
-Step 1: Change directory
-cd /root/aws-security-training/terraform_intro/advanced
-CopyErrorCopied
-Step 2: Initialize the terraform plugins
-terraform init
-CopyErrorCopied
-Step 3: Describe the plan of action
-terraform plan
-CopyErrorCopied
-Step 4: Now create the infrastructure
-terraform apply -auto-approve
-CopyErrorCopied
-Step 5: In ProvisionedServerInfo just copy the URL and paste into the browser. You will see a Welcome Page.
-Teardown
-Step 1: Now you can destroy the box
-terraform destroy -auto-approve
-CopyErrorCopied
-It will take few minutes.
-
-References
-https://www.terraform.io/intro/index.html
-https://learn.hashicorp.com/terraform/
-
-
-The CloudFormation template `lab-environment.yml` creates a lab environment consisting of:
-
-* EC2 Instance with an IAM role attached (*access to SSM is granted for Session Manager access*)
-* S3 bucket
-* SSM parameters
-
-1. Create a CloudFormation stack based on the template `lab-environment.yml`.
-    1. Set stack name to your name but only use characters `a-z` (lowercase!).
-1. Make a note with the outputs of the stack: `IamRole`, `S3Bucket`.
-1. Connect to the EC2 instance using SSM Session Manager
-    1. Visit https://console.aws.amazon.com/systems-manager/session-manager/start-session
-    1. Select your instance
-    1. Push the **Start Session** button
-    1. Jump to your home directory: `cd ~`
-1. Done. You can now start with the labs.
 
 ## Labs
 
