@@ -103,6 +103,6 @@ The CloudFormation template `lab-environment.yml` creates a lab environment cons
 1. Empty your S3 bucket created via terraform.
 1. Destroy your infrastructure via `terraform destroy --auto-approve`.
 
-## More Labs
+## Thanks to Widdix
 
-We offer AWS workshops tailored to your needs. See [widdix/learn-*](https://github.com/widdix?q=learn-) for more labs.
+This AWS workshops has been tailored to your needs, for the original lab see [widdix/learn-*](https://github.com/widdix?q=learn-).
