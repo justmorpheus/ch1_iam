@@ -2,7 +2,7 @@
 
 ## Introduction
 
-During bootstrapping your EC2 instance needs to download several artifacts from S3. Therefore, you are using the AWS CLI to synchronize all objects from an S3 bucket with a local folder on your instance. Replace <S3Bucket> with the output `S3Bucket` of your CloudFormation stack.
+During bootstrapping your EC2 instance needs to download several artifacts from S3. Therefore, you are using the AWS CLI to synchronize all objects from an S3 bucket with a local folder on your instance. Replace <S3Bucket> with the output `S3Bucket` of your terraform.
 
 Write an IAM policy that allows you to synchronize all objects from a specific S3 bucket.
 
@@ -12,9 +12,9 @@ Make sure, you don't allow access to any other S3 buckets.
 
 ## Instructions
 
-1. Open [S3](https://s3.console.aws.amazon.com/s3/home). Search for a bucket with a name equal to the `S3Bucket` output of your CloudFormation stack and upload a few files.
+1. Open [S3](https://s3.console.aws.amazon.com/s3/home). Search for a bucket with a name equal to the `S3Bucket` output of your terraform and upload a few files.
 1. Open [IAM](https://console.aws.amazon.com/iam/home).
-1. Search an IAM role with a name equal to the `IamRole` output of your CloudFormation stack.
+1. Search an IAM role with a name equal to the `IamRole` output of your terraform.
 1. Add an inline policy to your IAM role.
 1. Make sure you are logged into the SSH bastion host.
 
