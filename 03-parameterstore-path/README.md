@@ -7,7 +7,7 @@ Your application running on EC2 instances is loading it's configuration paramete
 Write an IAM policy that allows to read all parameters by a specific path.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/secret/ 
+aws ssm get-parameters-by-path --region <Region> --path /var/secret/ 
 ```
 
 ## Instructions
@@ -20,13 +20,13 @@ aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/secret/
 Getting all parameters from path `/.../secret/` should work.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/secret/ 
+aws ssm get-parameters-by-path --region <Region> --path /var/secret/ 
 ```
 
 Getting parameters from path `/.../supersecret/` should be denied.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/supersecret/ 
+aws ssm get-parameters-by-path --region <Region> --path /var/supersecret/ 
 ```
 
 ## Help
