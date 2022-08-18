@@ -21,9 +21,9 @@ aws s3 cp test.txt s3://<BadS3Bucket>/test/test.txt
 
 ## Instructions
 
-1. Open [S3](https://s3.console.aws.amazon.com/s3/home). Search for a bucket with a name equal to the `S3Bucket` output of your CloudFormation stack and upload a few files.
+1. Open [S3](https://s3.console.aws.amazon.com/s3/home). Search for a bucket with a name equal to the `S3Bucket` output of your terraform and upload a few files.
 1. Open [IAM](https://console.aws.amazon.com/iam/home).
-1. Search an IAM role with a name equal to the `IamRole` output of your CloudFormation stack.
+1. Search an IAM role with a name equal to the `IamRole` output of your terraform.
 1. Add an inline policy to your IAM role.
 1. Make sure you are logged into the SSH bastion host.
 
