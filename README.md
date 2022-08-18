@@ -46,6 +46,19 @@ These labs can be setup using terraform and setup AWS resources.
    NOTE: To skip typing yes try terraform apply --auto-approve.
    
 5. Once the terraform apply is complete, it will give output of above created resources.
+6. The terraform creates a lab environment consisting of: 
+    - EC2 Instance with an IAM role attached (access to SSM is granted for Session Manager access)
+    - S3 bucket
+    - SSM parameters
+
+7. Make a note with the outputs of the stack: IamRole, S3Bucket.
+8. Connect to the EC2 instance using SSM Session Manager
+        - Visit https://console.aws.amazon.com/systems-manager/session-manager/start-session
+        - Select your instance
+        - Push the Start Session button
+        - Jump to your home directory: cd ~
+    
+
 
 
 ## Labs
