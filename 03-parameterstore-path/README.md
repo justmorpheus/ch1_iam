@@ -7,7 +7,7 @@ Your application running on EC2 instances is loading it's configuration paramete
 Write an IAM policy that allows to read all parameters by a specific path.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<CloudFormationStackName>/a/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/a/ 
 ```
 
 ## Instructions
@@ -20,13 +20,13 @@ aws ssm get-parameters-by-path --region <Region> --path /<CloudFormationStackNam
 Getting all parameters from path `/.../a/` should work.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<CloudFormationStackName>/a/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/a/ 
 ```
 
 Getting parameters from path `/.../b/` should be denied.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<CloudFormationStackName>/b/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/b/ 
 ```
 
 ## Help
