@@ -13,7 +13,7 @@ aws ssm get-parameters-by-path --region <Region> --path /<CloudFormationStackNam
 ## Instructions
 
 1. Open [IAM](https://console.aws.amazon.com/iam/home).
-1. Search an IAM role with a name equal to the `IamRole` output of your CloudFormation stack.
+1. Search an IAM role with a name equal to the `IamRole` output of your terraform.
 1. Add an inline policy to your IAM role.
 1. Make sure you are logged into the SSH bastion host.
 
