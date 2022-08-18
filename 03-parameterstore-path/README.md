@@ -7,7 +7,7 @@ Your application running on EC2 instances is loading it's configuration paramete
 Write an IAM policy that allows to read all parameters by a specific path.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/a/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/secret/ 
 ```
 
 ## Instructions
@@ -17,16 +17,16 @@ aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/a/
 1. Add an inline policy to your IAM role.
 1. Make sure you are logged into the SSH bastion host.
 
-Getting all parameters from path `/.../a/` should work.
+Getting all parameters from path `/.../secret/` should work.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/a/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/secret/ 
 ```
 
-Getting parameters from path `/.../b/` should be denied.
+Getting parameters from path `/.../supersecret/` should be denied.
 
 ```
-aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/b/ 
+aws ssm get-parameters-by-path --region <Region> --path /<ssm-parameter>/supersecret/ 
 ```
 
 ## Help
