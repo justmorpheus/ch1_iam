@@ -38,12 +38,12 @@ These labs can be setup using terraform and setup AWS resources.
  ```
  4. Basic Terraform
 
-    - Step 1: Change directory: ```cd /root/aws-security-training/terraform_intro/basic```
+    - Step 1: Change directory: ```cd ch1_iam/```
     - Step 2: Initialize the terraform plugins via ```terraform init```
     -  Step 3: Describe the plan of action via ```terraform plan```
     -  Step 4: Now create the infrastructure via ```terraform apply```
    
-   NOTE: To skip typing yes try terraform apply -auto-approve.
+   NOTE: To skip typing yes try terraform apply --auto-approve.
    
 5. Once the terraform apply is complete, it will give output of above created resources.
 
