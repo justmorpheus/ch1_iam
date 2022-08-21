@@ -57,9 +57,22 @@ resource "aws_s3_bucket_acl" "example" {
   
 }
 
-# SSM parameter store demo
+# SSM parameter store-1
 resource "aws_ssm_parameter" "foo" {
-  name  = "/var/secret"
+  name  = "/var/secret/1"
+  type  = "String"
+  value = "secret"
+}
+
+# SSM parameter store-2
+resource "aws_ssm_parameter" "foo2" {
+  name  = "/var/secret/2"
+  type  = "String"
+  value = "secret"
+}
+# SSM parameter store-2
+resource "aws_ssm_parameter" "too" {
+  name  = "/var/supersecret"
   type  = "String"
   value = "superuser_secret"
 }
@@ -81,7 +94,22 @@ output "iamrole" {
 
 
 output "ec2" {
-  value = aws_iam_role.mystack.name
-  description = "Iam Role"
+  value = aws_instance.iam-security-ch1.tags.Name
+  description = "Ec2"
 
+}
+
+output "ssm-parameter-1" {
+  value = aws_ssm_parameter.foo.name
+  description = "SSM parameter name"
+}
+
+output "ssm-parameter-2" {
+  value = aws_ssm_parameter.foo2.name
+  description = "SSM parameter name"
+}
+
+output "ssm-parameter-3" {
+  value = aws_ssm_parameter.too.name
+  description = "SSM parameter name"
 }
