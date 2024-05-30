@@ -2,7 +2,6 @@
 
 Cloud Security Labs to learn IAM policies following the least privilege principle. 
 
-Looking for an instructor led workshop on cloud? Connect on [training@securitydojo.co.in](mailto:training@securitydojo.co.in).
 
 ## Introduction
 
